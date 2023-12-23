@@ -1,0 +1,21 @@
+EXPERIMENT_NAME: mlflow-cnn
+PIPELINE_STEPS: augment
+URI: http://localhost:5000
+SEED: 42
+EPOCHS: 2
+DIR: data
+FOLDER: train
+AUG_STEPS: rotated,cropped,flipped
+TARGET_SIZE:
+- 48
+- 48
+INPUT_SHAPE:
+- 48
+- 48
+- 1
+BATCH_SIZE: 64
+COLOR_MODE: grayscale
+CLASS_MODE: categorical
+TRAINING_INSTANCES: 28709
+VALIDATION_INSTANCES: 7178
+CLASSES: angry,disgust,fear,happy,sad,surprise,neutral

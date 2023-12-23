@@ -1,0 +1,26 @@
+name: mlflow-cnn
+conda_env: mlflow.yaml
+
+entry_points:
+  main:
+    parameters:
+      config_file: {type: path, default: "./config.yaml", help: "Path to the config file."}
+    command: "python ./scripts/main.py --config_file {config_file}"
+
+  augment:
+    parameters:
+      config_file: {type: path, default: "./config.yaml", help: "Path to the config file."}
+    command: "python ./scripts/augment.py --config_file {config_file}"
+
+  train:
+    parameters:
+      config_file: {type: path, default: "./config.yaml", help: "Path to the config file."}
+    command: "python ./scripts/train.py --config_file {config_file}"
+  
+  register:
+    parameters:
+      config_file: {type: path, default: "./config.yaml", help: "Path to the config file."}
+      run_id: {type: str, default: None, help: "Run ID of the model to register."}
+    command: "python ./scripts/register.py --config_file {config_file} --run_id {run_id}"
+
+  

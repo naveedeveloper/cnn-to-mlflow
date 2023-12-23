@@ -1,0 +1,17 @@
+name: mlflow
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - tensorflow
+  - mlflow
+  - keras
+  - scikit-learn
+  - tqdm
+  - seaborn
+  - pillow  
